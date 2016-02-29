@@ -68,8 +68,8 @@ class MoviesController < ApplicationController
       @movie = Movie.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list through. TU SI NAREDIL ZADNJO SPREMEMBO DODAL SI :IMAGE
     def movie_params
-      params.require(:movie).permit(:title, :description, :movie_lenght, :director, :rating)
+      params.require(:movie).permit(:title, :description, :movie_lenght, :director, :rating, :image)
     end
 end
