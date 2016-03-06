@@ -14,6 +14,8 @@ class ReviewsController < ApplicationController
   #def show
   #end
 
+
+
   # GET /reviews/new
   def new
     @review = Review.new
