@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -51,23 +51,28 @@ group :development do
   gem 'paperclip', '~> 4.3', '>= 4.3.5'
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem 'searchkick', '~> 1.2', '>= 1.2.1'
+
  
   
   
 
- gem 'devise', '~> 3.5', '>= 3.5.6'
+
  gem 'omniauth-facebook'
  gem 'omniauth-twitter'
+  
+  
   
   
 group :development do
    gem 'sqlite3'
  end
  
-group :development do
+group :production do
    gem 'pg'
    gem 'rails_12factor'
  end
+ 
+ gem 'rdoc-data', '~> 4.0', '>= 4.0.1'
  
 end
 
