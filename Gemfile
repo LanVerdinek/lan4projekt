@@ -51,7 +51,7 @@ group :development do
   gem 'paperclip', '~> 4.3', '>= 4.3.5'
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem 'searchkick', '~> 1.2', '>= 1.2.1'
-  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+ 
   
   
 
@@ -60,9 +60,15 @@ group :development do
  gem 'omniauth-twitter'
   
   
-
-  
-  
+group :development do
+   gem 'sqlite3'
+ end
+ 
+group :development do
+   gem 'pg'
+   gem 'rails_12factor'
+ end
+ 
 end
 
 
