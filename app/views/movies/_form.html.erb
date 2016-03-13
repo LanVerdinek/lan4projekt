@@ -1,3 +1,5 @@
+  <div class="tabla">
+   
 <%= form_for @movie, html: { multipart: true } do |f| %>
   <% if @movie.errors.any? %>
     <div id="error_explanation">
@@ -11,31 +13,37 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :ImePriimek %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :Opis %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :movie_lenght %><br>
+    <%= f.label :Višina %><br>
     <%= f.text_field :movie_lenght %>
   </div>
   <div class="field">
-    <%= f.label :director %><br>
+    <%= f.label :Starost %><br>
     <%= f.text_field :director %>
   </div>
   <div class="field">
-    <%= f.label :rating %><br>
+    <%= f.label :Ocena %><br>
     <%= f.text_field :rating %>
   </div>
     <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label :Slika %><br>
     <%= f.file_field :image %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+   <%= f.submit %>
   </div>
+  <%= link_to 'Pokaži', @movie %> |
+<%= link_to 'Nazaj', movies_path %>
+  
 <% end %>
+
+</div>

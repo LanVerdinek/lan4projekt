@@ -1,5 +1,51 @@
-<h1>New Movie</h1>
+  <div class="tabla">
+<h1>Nova oseba</h1>
 
-<%= render 'form' %>
+<%= form_for @movie, html: { multipart: true } do |f| %>
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
 
-<%= link_to 'Back', movies_path %>
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :ImePriimek %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Opis %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :Višina %><br>
+    <%= f.text_field :movie_lenght %>
+  </div>
+  <div class="field">
+    <%= f.label :Starost %><br>
+    <%= f.text_field :director %>
+  </div>
+  <div class="field">
+    <%= f.label :Ocena %><br>
+    <%= f.text_field :rating %>
+  </div>
+    <div class="field">
+    <%= f.label :Slika %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+   <%= f.submit %>
+  </div>
+  <%= link_to 'Pokaži', @movie %> |
+<%= link_to 'Nazaj', movies_path %>
+  
+<% end %>
+
+
+</div>
