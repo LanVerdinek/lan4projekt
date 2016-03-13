@@ -79,4 +79,7 @@ Rails.application.configure do
   # Paperclip config:
 Paperclip.options[:image_magick_path] = "/opt/ImageMagick/bin"
 Paperclip.options[:command_path] = "/opt/ImageMagick/bin"
+  
+  config.serve_static_assets = true
+  config.assets.compile = true
 end
