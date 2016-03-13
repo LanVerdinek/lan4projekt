@@ -29,9 +29,7 @@ class User < ActiveRecord::Base
     super && provider.blank?
   end         
          
-         
-         
-         
+    
          has_many :movies
          has_many :reviews, dependent: :destroy
 end
