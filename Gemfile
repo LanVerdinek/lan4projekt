@@ -58,7 +58,7 @@ group :development do
   
 
 
- gem 'omniauth-facebook'
+ gem 'omniauth-facebook', '~> 3.0'
  gem 'omniauth-twitter'
   
   

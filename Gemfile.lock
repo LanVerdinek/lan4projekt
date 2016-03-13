@@ -224,7 +224,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  omniauth-facebook
+  omniauth-facebook (~> 3.0)
   omniauth-twitter
   paperclip (~> 4.3, >= 4.3.5)
   pg
