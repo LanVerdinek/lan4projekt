@@ -48,13 +48,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= link_to "New Movie", new_movie_path, class: "active" %></li>
-          <li><%= link_to "Account", edit_user_registration_path %></li>
+          <li><%= link_to "Nova oseba", new_movie_path, class: "active" %></li>
+          <li><%= link_to "Nastavitve", edit_user_registration_path %></li>
+          <li><%= link_to "Odjava", destroy_user_session_path, method: :delete%></li>
         <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
-          <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
-          <li><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), class: "active" %></li>
-          <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "active" %></li>
+          <li><%= link_to "Registracija", new_user_registration_path, class: "active" %></li>
+          <li><%= link_to "Prijava", new_user_session_path, class: "active" %></li>
+          <li><%= link_to "Prijava z Twitterjem", user_omniauth_authorize_path(:twitter), class: "active" %></li>
+          <li><%= link_to "Prijava z Facebookom", user_omniauth_authorize_path(:facebook), class: "active" %></li>
         <% end %>
       </ul>
       
@@ -66,21 +67,7 @@
     <div class="brand">REDOVALNICA LJUDI</div>
     <div class="address-bar">1234 Kraj | Krajevni Kraj, KR AJ123 | 123.456.7890</div>
     
-    <a href="javascript:void(0)" id="playsound">POFUKAN SOUND</a>
-    <%= link_to "Log Out", destroy_user_session_path, method: :delete%>
 
-
-<audio id="sound_effect" class="audio_player" preload="auto">
-    <source src=" http://villagegeek.com/wavfiles/heres_looking.mp3" type="audio/mp3">
-</audio>
-<script>
-    $('#playsound').click(function (e) {
-    $('#sound_effect')[0].currentTime = 0;
-    $('#sound_effect')[0].play();
-
-    return false;
-});
-</script>
     <div class="container">
 
         <div class="row">
@@ -115,10 +102,12 @@
                             <span class="icon-next"></span>
                         </a>
                     </div>
+                    
+
                     <h2 class="brand-before">
                         <small>Welcome to</small>
                     </h2>
-                    <h1 class="brand-name">REDOCALNICA LJUDI</h1>
+                    <h1 class="brand-name">REDOVALNICA LJUDI</h1>
                     <hr class="tagline-divider">
                     <h2>
                         <small>By
@@ -127,6 +116,22 @@
                         <br><br><br>
                         
                         <p id="notice"><%= notice %></p>
+                        
+                                            <div class="audio">
+                        <a href="javascript:void(0)" id="playsound">Ko ti stran končno dela</a>
+    
+<audio id="sound_effect" class="audio_player" preload="auto">
+    <source src="https://wiki.teamfortress.com/w/images/f/f4/Engineer_cheers02.wav?t=20100709021646" type="audio/mp3">
+</audio>
+<script>
+    $('#playsound').click(function (e) {
+    $('#sound_effect')[0].currentTime = 0;
+    $('#sound_effect')[0].play();
+
+    return false;
+});
+</script>
+</div>
 
 <h1>Spisek Ljudi</h1>
 
